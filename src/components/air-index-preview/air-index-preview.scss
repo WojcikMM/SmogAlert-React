@@ -1,0 +1,28 @@
+.air-index-preview {
+  margin-top: 3em;
+
+  &__header {
+    display: flex;
+
+    &__label {
+      flex: 1;
+    }
+
+    &__value {
+      flex: 1;
+    }
+  }
+
+  &__container {
+    background-color: bisque;
+
+    &__row {
+      display: flex;
+      height: 2em;
+      //flex-direction: column;
+      &__column {
+        flex: 1;
+      }
+    }
+  }
+}
