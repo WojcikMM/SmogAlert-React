@@ -1,24 +1,33 @@
 .air-index-preview {
-  margin-top: 3em;
+  margin-top: 2em;
 
   &__header {
-    display: flex;
+    //display: flex;
+    text-align: center;
 
     &__label {
-      flex: 1;
+      font-size: x-large;
     }
 
     &__value {
-      flex: 1;
+
     }
   }
 
   &__container {
-    background-color: bisque;
+    //background-color: bisque;
+    margin-top: 1.5em;
+
+    &__label {
+      text-align: center;
+      font-size: x-large;
+    }
 
     &__row {
       display: flex;
       height: 2em;
+      padding: 0.5em;
+      border-bottom: 2px solid lightskyblue;
       //flex-direction: column;
       &__column {
         flex: 1;

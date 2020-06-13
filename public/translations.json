@@ -1,0 +1,18 @@
+{
+  "languages": [
+    {
+      "name": "English",
+      "code": "en"
+    },
+    {
+      "name": "Polski",
+      "code": "pl"
+    }
+  ],
+  "translation": {
+    "serialPortLabel": [
+      "Serial Port",
+      "Port"
+    ]
+  }
+}

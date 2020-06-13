@@ -1,0 +1,8 @@
+.stations-selector {
+  width: 30em;
+}
+@media only screen and (max-width: 600px) {
+  .stations-selector {
+    width: 90vw;
+  }
+}

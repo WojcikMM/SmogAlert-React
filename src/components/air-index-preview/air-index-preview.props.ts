@@ -1,5 +1,5 @@
 export interface AirIndexPreviewLevel {
-    id: number | null;
+    id?: number;
     date: string;
     label: string;
 }

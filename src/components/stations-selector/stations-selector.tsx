@@ -3,24 +3,44 @@ import {connect} from "react-redux";
 import React from "react";
 import {StationDto} from "../../clients/dtos";
 import {fetchAirIndex, fetchStations} from "../../clients";
+import './stations-selector.scss';
+import {Select, InputLabel, MenuItem} from "@material-ui/core";
 
 class StationsSelector extends React.Component<any, any> {
+
+    private readonly labelId = 'stations-selector-label';
+
     componentDidMount() {
         this.props.fetchStations();
     }
+
     render() {
 
         return (
-            <select value={this.props.selectedStationId} onChange={this.props.handleStationChange}>
-                <option key="" value=""/>
-                {this.options}
-            </select>
+            <div>
+                <InputLabel id={this.labelId}>Stations</InputLabel>
+                <Select label={this.labelId}
+                        className="stations-selector"
+                        value={this.props.selectedStationId}
+                        onChange={this.props.handleStationChange}>
+                    <MenuItem value=""></MenuItem>
+                    {this.props.options.map((option: StationDto) =>
+                        (<MenuItem value={option.id}>{option.stationName}</MenuItem>)
+                    )}
+                </Select>
+            </div>
+            // <select className="stations-selector"
+            //         value={this.props.selectedStationId}
+            //         onChange={this.props.handleStationChange}>
+            //     <option key="" value=""/>
+            //     {this.options}
+            // </select>
         );
     }
 
     private get options() {
-       return this.props.options.map((option: StationDto) => {
-            return (<option key={`${option.id}`} value={option.id}>{option.stationName}</option>);
+        return this.props.options.map((option: StationDto) => {
+            return (<MenuItem value={option.id}>{option.stationName}</MenuItem>);
         });
     }
 }

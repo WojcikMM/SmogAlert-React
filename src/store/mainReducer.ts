@@ -4,7 +4,7 @@ import {
     FETCH_STATIONS_SUCCESS,
     FETCH_AIR_INDEX_START,
     FETCH_STATIONS_FROM_CACHE,
-    FETCH_AIR_INDEX_SUCCESS
+    FETCH_AIR_INDEX_SUCCESS, FETCH_AIR_INDEX_FAILS
 } from './actions';
 import {
     StationDto,
@@ -54,14 +54,20 @@ export const mainReducer = (state = initialState, action: any) => {
             return {
                 ...state,
                 selectedStationId: action.selectedStationId,
-                loadingIndex: true
+                loadingAirIndex: true
             } as StoreModel
         case FETCH_AIR_INDEX_SUCCESS:
             return {
                 ...state,
                 airIndexModel: action.airIndex,
-                loadingIndex: false
+                loadingAirIndex: false
             } as StoreModel
+        case FETCH_AIR_INDEX_FAILS:
+            return {
+                ...state,
+                loadingAirIndex: false,
+                selectedStationId: 0
+            }
         default:
             console.warn(`There is no handler for event: ${action.type}`);
             return state;
