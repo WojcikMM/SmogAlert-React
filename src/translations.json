@@ -1,0 +1,42 @@
+{
+  "languages": [
+    {
+      "name": "English",
+      "code": "en"
+    },
+    {
+      "name": "Polski",
+      "code": "pl"
+    }
+  ],
+  "translation": {
+    "subHeader": [
+      "Check the air quality in your area",
+      "Sprawdź jakość powietrza w swojej okolicy"
+    ],
+    "stationsSelectorLabel": [
+      "Stations:",
+      "Stacje pomiarowe:"
+    ],
+    "airIndexPreviewTitle": [
+      "Summary:",
+      "Podsumowanie:"
+    ],
+    "airIndexPreviewTableColumnType": [
+      "Type",
+      "Typ"
+    ],
+    "airIndexPreviewTableColumnValue": [
+      "Value",
+      "Wartość"
+    ],
+    "airIndexPreviewTableColumnDate": [
+      "Data date",
+      "Data danych"
+    ],
+    "airIndexDescriptionNoData": [
+      "No data.",
+      "Brak danych."
+    ]
+  }
+}

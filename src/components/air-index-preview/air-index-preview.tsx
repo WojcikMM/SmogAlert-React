@@ -1,46 +1,50 @@
 import React from "react";
 import {connect} from "react-redux";
-import './air-index-preview.scss';
-import {mapPropsToPreviewArray, mapStateToProps} from "./air-index-preview.mapper";
+import {mapStateToProps} from "./air-index-preview.mapper";
 import {AirIndexPreviewLevel, AirIndexPreviewProps} from "./air-index-preview.props";
+import {Card, TableCell, CardHeader, Table, TableBody, TableHead, TableRow, CardContent} from "@material-ui/core";
+import './air-index-preview.scss';
 import {AirIndexDescription} from "../air-index-description/air-index-description";
 
 
 class AirIndexPreview extends React.Component<AirIndexPreviewProps, any> {
-
-    private get renderIndexes() {
-        return mapPropsToPreviewArray(this.props)
-            .map((index: AirIndexPreviewLevel) => {
-                return (
-                    <div key={index.label} className="air-index-preview__container__row">
-                        <div className="air-index-preview__container__row__column">
-                            {index.label}
-                        </div>
-                        <div className="air-index-preview__container__row__column">
-                            <AirIndexDescription indexId={index.id}/>
-                        </div>
-                    </div>
-                )
-            });
-    }
-
-
     render() {
         return (
-            <div className="air-index-preview">
-                <div className="air-index-preview__header">
-                    <div className="air-index-preview__header__label">
-                        Summary:
-                    </div>
-                    <div className="air-index-preview__header__value">
-                        <AirIndexDescription indexId={this.props.stIndexLevel.id}/>
-                    </div>
-                </div>
-                <div className="air-index-preview__container">
-                    <div className="air-index-preview__container__label">Details:</div>
-                    {this.renderIndexes}
-                </div>
-            </div>
+            <React.Fragment>
+                <Card>
+                    <CardHeader
+                        title={
+                            <React.Fragment>
+                                <span
+                                    className="air-index-preview__summary-title">{this.props.translations.title}</span>
+                                <AirIndexDescription noDataLabel={this.props.translations.noDataLabel} indexId={this.props.summaryId}/>
+                            </React.Fragment>}>
+                    </CardHeader>
+                    <CardContent>
+                        <div className="air-index-preview__sub-header">Details:</div>
+                        <Table>
+                            <TableHead>
+                                <TableRow>
+                                    <TableCell>{this.props.translations.tableColumns.type}</TableCell>
+                                    <TableCell align="right">{this.props.translations.tableColumns.value}</TableCell>
+                                </TableRow>
+                            </TableHead>
+                            <TableBody>
+                                {this.props.indexes.map((airIndexPreviewLevel: AirIndexPreviewLevel) => (
+                                    <TableRow key={airIndexPreviewLevel.label}>
+                                        <TableCell>{airIndexPreviewLevel.label}</TableCell>
+                                        <TableCell align="right">
+                                            <AirIndexDescription noDataLabel={this.props.translations.noDataLabel} indexId={airIndexPreviewLevel.id}/>
+                                        </TableCell>
+                                        {/*<TableCell>{airIndexPreviewLevel.date}</TableCell>*/}
+                                        {/*   TODO: Add date as (i) with popup */}
+                                    </TableRow>)
+                                )}
+                            </TableBody>
+                        </Table>
+                    </CardContent>
+                </Card>
+            </React.Fragment>
         )
     }
 }

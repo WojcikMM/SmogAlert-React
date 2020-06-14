@@ -1,8 +1,8 @@
 export interface StationDto {
     id: number;
     stationName: string;
-    gegrLat: string;
-    gegrLon: string;
+    gegrLat: number;
+    gegrLon: number;
     city: City;
     addressStreet: string;
 }

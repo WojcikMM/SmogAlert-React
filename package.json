@@ -1,9 +1,10 @@
 {
-  "name": "book-reviewer-app",
+  "name": "smog-alert-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.10.2",
+    "@material-ui/lab": "^4.0.0-alpha.56",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
@@ -12,14 +13,12 @@
     "@types/react": "^16.9.35",
     "@types/react-dom": "^16.9.8",
     "@types/react-redux": "^7.1.9",
-    "@types/react-select": "^3.0.13",
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-localize-redux": "^3.5.3",
     "react-redux": "^7.2.0",
     "react-scripts": "3.4.1",
-    "react-select": "^3.1.0",
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0",
     "typescript": "^3.7.5"

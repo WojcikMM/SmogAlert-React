@@ -1,12 +1,15 @@
-import {StoreModel} from "../../store/mainReducer";
 import {connect} from "react-redux";
-import React from "react";
+import React, {ChangeEvent} from "react";
 import {StationDto} from "../../clients/dtos";
 import {fetchAirIndex, fetchStations} from "../../clients";
 import './stations-selector.scss';
-import {Select, InputLabel, MenuItem} from "@material-ui/core";
+import {InputLabel, MenuItem, Select} from "@material-ui/core";
+import {StoreModel} from "../../store/store.model";
+import {getTranslate} from "react-localize-redux";
+import {StationsSelectorProps} from "./stations-selector-props";
 
-class StationsSelector extends React.Component<any, any> {
+
+class StationsSelector extends React.Component<StationsSelectorProps, any> {
 
     private readonly labelId = 'stations-selector-label';
 
@@ -17,45 +20,34 @@ class StationsSelector extends React.Component<any, any> {
     render() {
 
         return (
-            <div>
-                <InputLabel id={this.labelId}>Stations</InputLabel>
+            <React.Fragment>
+                <InputLabel id={this.labelId}>{this.props.label}</InputLabel>
                 <Select label={this.labelId}
                         className="stations-selector"
                         value={this.props.selectedStationId}
                         onChange={this.props.handleStationChange}>
-                    <MenuItem value=""></MenuItem>
-                    {this.props.options.map((option: StationDto) =>
-                        (<MenuItem value={option.id}>{option.stationName}</MenuItem>)
+                    <MenuItem disabled={true} value="0"/>
+                    {this.props.stations.map((option: StationDto) =>
+                        (<MenuItem key={option.id} value={option.id}>{option.stationName}</MenuItem>)
                     )}
                 </Select>
-            </div>
-            // <select className="stations-selector"
-            //         value={this.props.selectedStationId}
-            //         onChange={this.props.handleStationChange}>
-            //     <option key="" value=""/>
-            //     {this.options}
-            // </select>
+            </React.Fragment>
         );
-    }
-
-    private get options() {
-        return this.props.options.map((option: StationDto) => {
-            return (<MenuItem value={option.id}>{option.stationName}</MenuItem>);
-        });
     }
 }
 
 const mapStateToProps = (state: StoreModel) => {
     return {
-        options: state.stations,
-        selectedStationId: state.selectedStationId
-    }
+        stations: state.main.stations,
+        selectedStationId: state.main.selectedStationId,
+        label: getTranslate(state.localize)('stationsSelectorLabel')
+    } as StationsSelectorProps;
 }
 
 const mapDispatchToProps = (dispatch: any) => {
     return {
-        fetchStations: () => dispatch(fetchStations()),
-        handleStationChange: (event: any) => dispatch(fetchAirIndex(event.target.value))
+        fetchStations: (): void => dispatch(fetchStations()),
+        handleStationChange: (event: ChangeEvent<{ name?: string | undefined; value: unknown; }>) => dispatch(fetchAirIndex(event.target.value as number))
     }
 }
 

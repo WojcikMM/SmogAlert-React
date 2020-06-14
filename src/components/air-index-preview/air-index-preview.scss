@@ -1,37 +1,11 @@
 .air-index-preview {
-  margin-top: 2em;
-
-  &__header {
-    //display: flex;
-    text-align: center;
-
-    &__label {
-      font-size: x-large;
-    }
-
-    &__value {
-
-    }
+  &__summary-title {
+    margin-right: .5em;
   }
 
-  &__container {
-    //background-color: bisque;
-    margin-top: 1.5em;
-
-    &__label {
-      text-align: center;
-      font-size: x-large;
-    }
-
-    &__row {
-      display: flex;
-      height: 2em;
-      padding: 0.5em;
-      border-bottom: 2px solid lightskyblue;
-      //flex-direction: column;
-      &__column {
-        flex: 1;
-      }
-    }
+  &__sub-header {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
   }
 }

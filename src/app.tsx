@@ -1,10 +1,12 @@
 import React from 'react';
 import {Provider} from 'react-redux';
-import MainView from "./components/main-view/main-view";
 import {store} from "./store/store";
 import './app.scss';
 import {InitializePayload, LocalizeProvider} from "react-localize-redux";
-import {languages, translation} from '../public/translations.json';
+import {languages, translation} from './translations.json';
+import Header from "./components/header/header";
+import StationsSelector from "./components/stations-selector/stations-selector";
+import AirIndexPreview from "./components/air-index-preview/air-index-preview";
 
 class App extends React.Component<any, any> {
 
@@ -20,7 +22,9 @@ class App extends React.Component<any, any> {
         return (
             <Provider store={store}>
                 <LocalizeProvider store={store} initialize={this.defaultTranslations}>
-                    <MainView/>
+                    <Header/>
+                    <StationsSelector/>
+                    <AirIndexPreview/>
                 </LocalizeProvider>
             </Provider>
         );

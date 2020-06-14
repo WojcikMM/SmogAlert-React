@@ -11,7 +11,7 @@ import {
     AirIndexDto
 } from "../clients/dtos";
 
-export interface StoreModel {
+export interface MainState {
     loadingStations: boolean;
     loadingAirIndex: boolean;
 
@@ -21,7 +21,7 @@ export interface StoreModel {
     airIndexModel: AirIndexDto | null;
 }
 
-const initialState: StoreModel = {
+const initialState: MainState = {
     loadingStations: false,
     loadingAirIndex: false,
     stations: [] as StationDto[],
@@ -36,32 +36,32 @@ export const mainReducer = (state = initialState, action: any) => {
             return {
                 ...state,
                 loadingStations: true
-            } as StoreModel;
+            } as MainState;
         case FETCH_STATIONS_FROM_CACHE:
         case FETCH_STATIONS_SUCCESS:
             return {
                 ...state,
                 loadingStations: false,
                 stations: action.stations
-            } as StoreModel;
+            } as MainState;
         case FETCH_STATIONS_FAIL:
             return {
                 ...state,
                 loadingStations: false,
                 stations: []
-            } as StoreModel;
+            } as MainState;
         case FETCH_AIR_INDEX_START:
             return {
                 ...state,
                 selectedStationId: action.selectedStationId,
                 loadingAirIndex: true
-            } as StoreModel
+            } as MainState
         case FETCH_AIR_INDEX_SUCCESS:
             return {
                 ...state,
                 airIndexModel: action.airIndex,
                 loadingAirIndex: false
-            } as StoreModel
+            } as MainState
         case FETCH_AIR_INDEX_FAILS:
             return {
                 ...state,

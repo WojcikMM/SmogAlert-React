@@ -4,13 +4,21 @@ export interface AirIndexPreviewLevel {
     label: string;
 }
 
+export interface AirIndexPreviewTranslations {
+    title: string;
+    noDataLabel: string;
+    tableColumns: AirIndexPreviewTranslationsTableColumns;
+}
+
+export interface AirIndexPreviewTranslationsTableColumns {
+    type: string;
+    value: string;
+    date: string;
+}
+
 export interface AirIndexPreviewProps {
-    c6IndexLevel: AirIndexPreviewLevel;
-    coIndexLevel: AirIndexPreviewLevel;
-    no2IndexLevel: AirIndexPreviewLevel;
-    o3IndexLevel: AirIndexPreviewLevel;
-    pm10IndexLevel: AirIndexPreviewLevel;
-    pm25IndexLevel: AirIndexPreviewLevel;
-    soIndexLevel: AirIndexPreviewLevel;
-    stIndexLevel: AirIndexPreviewLevel;
+    indexes: AirIndexPreviewLevel[];
+    summaryId?: number;
+    summaryDate: string;
+    translations: AirIndexPreviewTranslations;
 }
