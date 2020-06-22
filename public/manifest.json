@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Smog Alert",
+  "name": "Smog Alert - Check air quality",
   "icons": [
     {
       "src": "favicon.ico",
