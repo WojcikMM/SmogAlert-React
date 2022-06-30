@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/SmogAlert-React/static/css/main.ed71ad25.chunk.css",
-    "main.js": "/SmogAlert-React/static/js/main.2e827885.chunk.js",
-    "main.js.map": "/SmogAlert-React/static/js/main.2e827885.chunk.js.map",
+    "main.js": "/SmogAlert-React/static/js/main.8f9a71bb.chunk.js",
+    "main.js.map": "/SmogAlert-React/static/js/main.8f9a71bb.chunk.js.map",
     "runtime-main.js": "/SmogAlert-React/static/js/runtime-main.c5a2fcd8.js",
     "runtime-main.js.map": "/SmogAlert-React/static/js/runtime-main.c5a2fcd8.js.map",
     "static/js/2.cc775228.chunk.js": "/SmogAlert-React/static/js/2.cc775228.chunk.js",
     "static/js/2.cc775228.chunk.js.map": "/SmogAlert-React/static/js/2.cc775228.chunk.js.map",
     "index.html": "/SmogAlert-React/index.html",
-    "precache-manifest.711257b441e7329f615ae2b49fb486a0.js": "/SmogAlert-React/precache-manifest.711257b441e7329f615ae2b49fb486a0.js",
+    "precache-manifest.008edd0356c9b4cf475cf0ecc1221e1a.js": "/SmogAlert-React/precache-manifest.008edd0356c9b4cf475cf0ecc1221e1a.js",
     "service-worker.js": "/SmogAlert-React/service-worker.js",
     "static/css/main.ed71ad25.chunk.css.map": "/SmogAlert-React/static/css/main.ed71ad25.chunk.css.map",
     "static/js/2.cc775228.chunk.js.LICENSE.txt": "/SmogAlert-React/static/js/2.cc775228.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.c5a2fcd8.js",
     "static/js/2.cc775228.chunk.js",
     "static/css/main.ed71ad25.chunk.css",
-    "static/js/main.2e827885.chunk.js"
+    "static/js/main.8f9a71bb.chunk.js"
   ]
 }
