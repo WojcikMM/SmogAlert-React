@@ -4,8 +4,8 @@ export const CONST = {
         STATIONS_ARRAY: 'STATIONS_ARRAY'
     },
     API_URLS: {
-        GET_STATIONS: 'https://cors-anywhere.herokuapp.com/api.gios.gov.pl/pjp-api/rest/station/findAll',
-        GET_AIR_INDEX: 'https://cors-anywhere.herokuapp.com/api.gios.gov.pl/pjp-api/rest/aqindex/getIndex'
+        GET_STATIONS: 'https://www.whateverorigin.org/get?url=https://api.gios.gov.pl/pjp-api/rest/station/findAll',
+        GET_AIR_INDEX: 'https://www.whateverorigin.org/get?url=https://api.gios.gov.pl/pjp-api/rest/aqindex/getIndex'
     },
     DEFAULTS: {
         INDEX_LEVEL: 3
