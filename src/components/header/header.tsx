@@ -10,6 +10,10 @@ class Header extends React.Component<HeaderProps, any> {
             <div>
                 <h1>Smog Alert</h1>
                 <p>{this.props.subHeader}</p>
+
+                <h4>If no data loaded please click
+                    <a href="https://cors-anywhere.herokuapp.com" target="_blank">here</a>
+                    and enable gateway for demo</h4>
             </div>
         );
     }
