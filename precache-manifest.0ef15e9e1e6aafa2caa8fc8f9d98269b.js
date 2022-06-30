@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1fd6189da07dafed7a7b80b3a165051c",
+    "revision": "d93d3408f88188cee97bf948cb4e8184",
     "url": "/SmogAlert-React/index.html"
   },
   {
-    "revision": "02dbf4f05261688343cc",
+    "revision": "44b10721b2089b6df851",
     "url": "/SmogAlert-React/static/css/main.ed71ad25.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/SmogAlert-React/static/js/2.cc775228.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "02dbf4f05261688343cc",
-    "url": "/SmogAlert-React/static/js/main.8f9a71bb.chunk.js"
+    "revision": "44b10721b2089b6df851",
+    "url": "/SmogAlert-React/static/js/main.24954552.chunk.js"
   },
   {
     "revision": "29472b36dc25686eab1e",

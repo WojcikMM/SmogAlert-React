@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/SmogAlert-React/precache-manifest.008edd0356c9b4cf475cf0ecc1221e1a.js"
+  "/SmogAlert-React/precache-manifest.0ef15e9e1e6aafa2caa8fc8f9d98269b.js"
 );
 
 self.addEventListener('message', (event) => {
